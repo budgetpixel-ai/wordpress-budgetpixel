@@ -1,0 +1,25 @@
+# Publishes a tagged release to the WordPress.org SVN repository.
+# Needs repository secrets SVN_USERNAME / SVN_PASSWORD (the WordPress.org
+# account that owns the plugin) once the plugin is approved. Assets in
+# .wordpress-org/ (banners, icons, screenshots) are synced to /assets.
+name: Deploy to WordPress.org
+on:
+  push:
+    tags:
+      - "v*"
+jobs:
+  deploy:
+    # Gated on a repository VARIABLE so tagging a GitHub release before the
+    # WordPress.org listing exists is a no-op instead of a failed SVN login.
+    # After approval: Settings → Secrets and variables → Actions → Variables →
+    # WPORG_DEPLOY_ENABLED = true, plus the SVN_USERNAME / SVN_PASSWORD secrets.
+    if: ${{ vars.WPORG_DEPLOY_ENABLED == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: WordPress.org plugin deploy
+        uses: 10up/action-wordpress-plugin-deploy@stable
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: budgetpixel-ai-images

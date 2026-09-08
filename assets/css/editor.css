@@ -1,0 +1,5 @@
+.budgetpixel-panel .budgetpixel-cost{margin:4px 0 12px;font-size:12px;color:#50575e}
+.budgetpixel-panel .budgetpixel-results{margin-top:12px;display:grid;gap:12px}
+.budgetpixel-panel .budgetpixel-result img{width:100%;height:auto;border-radius:4px;display:block;border:1px solid #dcdcde}
+.budgetpixel-panel .budgetpixel-result-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.budgetpixel-panel .components-notice{margin:8px 0 0}
