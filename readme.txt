@@ -12,7 +12,7 @@ Generate a featured image or inline image for any post from its title and excerp
 
 == Description ==
 
-BudgetPixel AI Images puts AI image generation inside the block editor.
+BudgetPixel AI Images puts AI image generation inside the block editor — and does three things generic AI image plugins don't: one key unlocks 100+ models from different labs instead of a single provider, the exact credit cost is shown before every generation, and a WP-CLI command fills every missing featured image in your archive in one priced, confirmed run.
 
 * **Featured images in one click.** A "BudgetPixel AI Image" panel in the post sidebar pre-fills a prompt from your title and excerpt. Edit it, pick a model, see the exact credit cost, generate, and set the result as the featured image or insert it into the post.
 * **100+ models.** FLUX 2, Seedream 5.0, Nano Banana, GPT Image, Qwen-Image, Kling and more, priced per image. The live model list and prices come from your account.
