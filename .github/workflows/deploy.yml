@@ -7,6 +7,10 @@ on:
   push:
     tags:
       - "v*"
+  # Manual run for approval day: v1.0.0 was tagged before the WordPress.org
+  # listing existed, and a tag push only fires once. After approval, set the
+  # WPORG_DEPLOY_ENABLED variable + SVN secrets, then run this workflow by hand.
+  workflow_dispatch:
 jobs:
   deploy:
     # Gated on a repository VARIABLE so tagging a GitHub release before the
