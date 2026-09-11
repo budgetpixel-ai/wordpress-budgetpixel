@@ -138,7 +138,7 @@ class BudgetPixel_Settings {
 		<div class="wrap">
 			<h1><?php esc_html_e( 'BudgetPixel AI Images', 'budgetpixel-ai-images' ); ?></h1>
 			<p>
-				<?php esc_html_e( 'Generate featured and inline images inside the editor with 100+ AI models. Images are billed in credits from your BudgetPixel plan; the plugin itself is free.', 'budgetpixel-ai-images' ); ?>
+				<?php esc_html_e( 'Generate featured and inline images inside the editor with 25+ AI image models. Images are billed in credits from your BudgetPixel plan; the plugin itself is free.', 'budgetpixel-ai-images' ); ?>
 				<?php esc_html_e( 'A paid BudgetPixel plan is required for API access.', 'budgetpixel-ai-images' ); ?>
 				<a href="https://budgetpixel.com/data/ai-generation-price-index?utm_source=wordpress-plugin" target="_blank" rel="noopener"><?php esc_html_e( 'See what each model costs per image.', 'budgetpixel-ai-images' ); ?></a>
 			</p>

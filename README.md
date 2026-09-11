@@ -1,6 +1,6 @@
 # BudgetPixel AI Images — WordPress plugin
 
-Generate a featured image or inline image for any post from its title and excerpt, with 100+ AI models and the credit cost shown before every run. Bulk-fill missing featured images from WP-CLI.
+Generate a featured image or inline image for any post from its title and excerpt, with 25+ image models and the credit cost shown before every run. Bulk-fill missing featured images from WP-CLI.
 
 - Plugin page: https://budgetpixel.com/plugins/wordpress
 - API docs: https://docs.budgetpixel.com

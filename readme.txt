@@ -8,14 +8,14 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Generate a featured image or inline image for any post from its title and excerpt, with 100+ AI models and the credit cost shown before every run.
+Generate a featured image or inline image for any post from its title and excerpt, with 25+ image models and the credit cost shown before every run.
 
 == Description ==
 
-BudgetPixel AI Images puts AI image generation inside the block editor — and does three things generic AI image plugins don't: one key unlocks 100+ models from different labs instead of a single provider, the exact credit cost is shown before every generation, and a WP-CLI command fills every missing featured image in your archive in one priced, confirmed run.
+BudgetPixel AI Images adds AI image generation to the block editor. One BudgetPixel API key gives you 25+ image models from different labs, the exact credit cost is shown before every generation, and a WP-CLI command fills the missing featured images across your archive in one priced, confirmed run.
 
 * **Featured images in one click.** A "BudgetPixel AI Image" panel in the post sidebar pre-fills a prompt from your title and excerpt. Edit it, pick a model, see the exact credit cost, generate, and set the result as the featured image or insert it into the post.
-* **100+ models.** FLUX 2, Seedream 5.0, Nano Banana, GPT Image, Qwen-Image, Kling and more, priced per image. The live model list and prices come from your account.
+* **25+ image models.** FLUX 2, Seedream 5.0, Nano Banana, GPT Image, Qwen-Image, Kling and more, priced per image. The live model list and prices come from your account.
 * **Cost before you spend.** Every generation shows its credit cost first. The plugin never spends credits without a click.
 * **Bulk-fill missing featured images.** `wp budgetpixel featured --missing --dry-run` lists every post without a featured image and the total cost; drop `--dry-run` to generate them.
 * **Sensible defaults.** Alt text defaults to the prompt. The model and prompt are stored as attachment meta so you can always see how an image was made.
@@ -51,7 +51,7 @@ Yes. The plugin is free and GPL-licensed. Generating an image uses credits from 
 
 = How much does an image cost? =
 
-It depends on the model, from about 10 to 300 credits per image, with 1,000 credits costing about one US dollar on a credit pack. The editor shows the exact cost before you generate, and the [price index](https://budgetpixel.com/data/ai-generation-price-index) lists every model.
+It depends on the model, from about 10 to 120 credits per image, with 1,000 credits costing about one US dollar on a credit pack. The editor shows the exact cost before you generate, and the [price index](https://budgetpixel.com/data/ai-generation-price-index) lists every model.
 
 = Where is my API key stored? =
 
