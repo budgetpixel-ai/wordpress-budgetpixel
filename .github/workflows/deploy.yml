@@ -10,7 +10,16 @@ on:
   # Manual run for approval day: v1.0.0 was tagged before the WordPress.org
   # listing existed, and a tag push only fires once. After approval, set the
   # WPORG_DEPLOY_ENABLED variable + SVN secrets, then run this workflow by hand.
+  # `version` is required on a manual run: the deploy action otherwise takes the
+  # version from the git ref, which on a dispatch is a BRANCH (refs/heads/main)
+  # and would create an SVN tag of that name. On a tag push it stays empty and
+  # the action falls back to the tag.
   workflow_dispatch:
+    inputs:
+      version:
+        description: "Version to publish — must match Stable tag in readme.txt and Version in the plugin header"
+        required: true
+        default: "1.0.0"
 jobs:
   deploy:
     # Gated on a repository VARIABLE so tagging a GitHub release before the
@@ -27,3 +36,4 @@ jobs:
           SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
           SLUG: budgetpixel-ai-images
+          VERSION: ${{ github.event.inputs.version }}

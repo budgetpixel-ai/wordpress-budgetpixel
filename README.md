@@ -10,7 +10,7 @@ Generate a featured image or inline image for any post from its title and excerp
 
 Download `budgetpixel-ai-images.zip` from the [latest release](https://github.com/budgetpixel-ai/wordpress-budgetpixel/releases/latest) and upload it under Plugins → Add New → Upload Plugin, or clone this repository into `wp-content/plugins/budgetpixel-ai-images`.
 
-WordPress.org listing: pending review. Slug `budgetpixel-ai-images` (derived from the plugin name; the text domain matches).
+WordPress.org listing: https://wordpress.org/plugins/budgetpixel-ai-images/ — approved 2026-09-12. The easiest install is Plugins → Add New → search "BudgetPixel AI Images"; releases here stay in step with the directory (keep the directory version >= the GitHub release so GitHub installs auto-update).
 
 ## Development
 
