@@ -1,0 +1,20 @@
+# Updates the WordPress.org listing assets (banners, icon, screenshots) and the
+# readme WITHOUT publishing a new version. Assets live in SVN /assets, which is
+# independent of trunk and tags — so a banner or screenshot fix does not need a
+# release, and re-running the deploy workflow for an existing version would
+# collide with its tag.
+name: Update WordPress.org assets
+on:
+  workflow_dispatch:
+jobs:
+  assets:
+    if: ${{ vars.WPORG_DEPLOY_ENABLED == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: WordPress.org assets + readme update
+        uses: 10up/action-wordpress-plugin-asset-update@stable
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: budgetpixel-ai-images
